@@ -52,44 +52,6 @@ class VoyagesController extends AbstractController {
         return $this->render("pages/voyages.html.twig", [
             'visites' => $visites
         ]);
-    }
-    
-    /**
-     * @Route("/voyages/tri/{champ}/{ordre}", name="pays.sort")
-     * @param type $champ
-     * @param type $ordre
-     * @return Response
-     */
-    public function sort2($champ, $ordre): Response{
-        $visites = $this->repository->findAllOrderBy($champ, $ordre);
-        return $this->render("pages/voyages.html.twig", [
-            'visites' => $visites
-        ]);
-    }
-    
-    /**
-     * @Route("/voyages/tri/{champ}/{ordre}", name="note.sort")
-     * @param type $champ
-     * @param type $ordre
-     * @return Response
-     */
-    public function sort3($champ, $ordre): Response{
-        $visites = $this->repository->findAllOrderBy($champ, $ordre);
-        return $this->render("pages/voyages.html.twig", [
-            'visites' => $visites
-        ]);
-    }
-    
-    /**
-     * @Route("/voyages/tri/{champ}/{ordre}", name="date.sort")
-     * @param type $champ
-     * @param type $ordre
-     * @return Response
-     */
-    public function sort4($champ, $ordre): Response{
-        $visites = $this->repository->findAllOrderBy($champ, $ordre);
-        return $this->render("pages/voyages.html.twig", [
-            'visites' => $visites
-        ]);
-    }
+    }    
+  
 }
